@@ -15,5 +15,5 @@ harness is disabled during build because the following tests fail:
 
 Use at your own risk.
 
-This Perl image is 213.5 MB--about 1/3 the size of the offical Perl
+This Perl image is 213.5 MB--about 1/3 the size of the official Perl
 Docker Hub image (656 MB)
