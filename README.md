@@ -2,18 +2,8 @@
 
 Perl on Alpine Linux
 
-This is an experimental build of Perl 5.22.1 on Alpine Linux. The test
-harness is disabled during build because the following tests fail:
+This is a build of Perl 5.22.2 on Alpine Linux. Because of its small
+size and pre-installed `cpanm`, this is an ideal base for Perl-based
+Docker images.
 
-    ../lib/Net/hostent.t
-      Non-zero exit status: 22
-      Parse errors: Bad plan.  You planned 7 tests but ran 4.
-    ../lib/locale.t
-      Failed test:  428
-    ../lib/warnings.t
-      Failed test:  698
-
-Use at your own risk.
-
-This Perl image is 213.5 MB--about 1/3 the size of the official Perl
-Docker Hub image (656 MB)
+This Docker image is 59.46 MB.
