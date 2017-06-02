@@ -2,11 +2,9 @@
 
 Perl on Alpine Linux
 
-This is a build of Perl 5.24.1 on Alpine Linux. Because of its small
-size and pre-installed `cpanm`, this is an ideal base for Perl-based
-Docker images.
+This is a build of Perl 5.26.0 on Alpine Linux. Because of its small size and pre-installed `cpanm`, this is an ideal base for Perl-based Docker images.
 
-This Docker image is 216.2 MB.
+This Docker image is 214.9 MB.
 
 ## CAVEAT
 
@@ -16,11 +14,12 @@ This Docker image is 216.2 MB.
     -------------------
     ../cpan/Time-Piece/t/02core_dst.t
       Failed tests:  58-60
+      Non-zero exit status: 3
     ../lib/locale.t
-      Failed test:  442
+      Failed test:  450
     ../lib/warnings.t
-      Failed test:  713
-    Files=2404, Tests=844145, 1071 wallclock secs (57.14 usr 10.74 sys + 614.87 cusr 29.64 csys = 712.39 CPU)
+      Failed test:  723
+    Files=2553, Tests=1185098, 1286 wallclock secs (94.22 usr 10.28 sys + 774.59 cusr 38.68 csys = 917.77 CPU)
     Result: FAIL
 
 If you depend on the functionality covered by these tests, you may
