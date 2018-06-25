@@ -2,9 +2,9 @@
 
 Perl on Alpine Linux
 
-This is a build of Perl 5.26.1 on Alpine Linux. Because of its small size and pre-installed `cpanm`, this is an ideal base for Perl-based Docker images.
+This is a build of Perl 5.26.2 on Alpine Linux. Because of its small size and pre-installed `cpanm`, this is an ideal base for Perl-based Docker images.
 
-This Docker image is 218 MB.
+This Docker image is 219 MB.
 
 ## CAVEAT
 
