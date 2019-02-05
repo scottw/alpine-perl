@@ -10,10 +10,10 @@ WORKDIR /usr/src/perl
 
 ## from perl; `true make test_harness` because 3 tests fail
 ## some flags from http://git.alpinelinux.org/cgit/aports/tree/main/perl/APKBUILD?id=19b23f225d6e4f25330e13144c7bf6c01e624656
-RUN curl -SLO https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.26.2.tar.bz2 \
-    && echo '2057b65e3a6ac71287c973402cd01084a1edc35b *perl-5.26.2.tar.bz2' | sha1sum -c - \
-    && tar --strip-components=1 -xjf perl-5.26.2.tar.bz2 -C /usr/src/perl \
-    && rm perl-5.26.2.tar.bz2 \
+RUN curl -SLO https://www.cpan.org/src/5.0/perl-5.26.3.tar.gz \
+    && echo '940e1739dd979a284f343dff57ddcbf7f555b928 *perl-5.26.3.tar.gz' | sha1sum -c - \
+    && tar --strip-components=1 -xzf perl-5.26.3.tar.gz -C /usr/src/perl \
+    && rm perl-5.26.3.tar.gz \
     && ./Configure -des \
         -Duse64bitall \
         -Dcccdlflags='-fPIC' \
@@ -27,7 +27,7 @@ RUN curl -SLO https://cpan.metacpan.org/authors/id/S/SH/SHAY/perl-5.26.2.tar.bz2
         -Dusenm \
     && make libperl.so \
     && make -j$(nproc) \
-    && TEST_JOBS=$(nproc) true make test_harness \
+    && true TEST_JOBS=$(nproc) make test_harness \
     && make install \
     && curl -LO https://raw.githubusercontent.com/miyagawa/cpanminus/master/cpanm \
     && chmod +x cpanm \
