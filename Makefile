@@ -1,3 +1,3 @@
-build: TAG=5.26
+build: TAG=5.30
 build:
 	docker build -t scottw/alpine-perl:$(TAG) .
