@@ -10,10 +10,10 @@ WORKDIR /usr/src/perl
 
 ## from perl; `true make test_harness` because 3 tests fail
 ## some flags from http://git.alpinelinux.org/cgit/aports/tree/main/perl/APKBUILD?id=19b23f225d6e4f25330e13144c7bf6c01e624656
-RUN curl -SLO https://www.cpan.org/src/5.0/perl-5.26.3.tar.gz \
-    && echo '940e1739dd979a284f343dff57ddcbf7f555b928 *perl-5.26.3.tar.gz' | sha1sum -c - \
-    && tar --strip-components=1 -xzf perl-5.26.3.tar.gz -C /usr/src/perl \
-    && rm perl-5.26.3.tar.gz \
+RUN curl -SLO https://www.cpan.org/src/5.0/perl-5.30.0.tar.gz \
+    && echo 'aa5620fb5a4ca125257ae3f8a7e5d05269388856 *perl-5.30.0.tar.gz' | sha1sum -c - \
+    && tar --strip-components=1 -xzf perl-5.30.0.tar.gz -C /usr/src/perl \
+    && rm perl-5.30.0.tar.gz \
     && ./Configure -des \
         -Duse64bitall \
         -Dcccdlflags='-fPIC' \
